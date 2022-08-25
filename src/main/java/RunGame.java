@@ -7,16 +7,14 @@ public class RunGame {
         game.setUnknown(game.getUnknownChars());
         player.printMessage(game.toString(game.getUnknown()));
 
-        while(!game.gameFinished){
+        while(!game.isGameFinished()){
             player.printMessage(player.handleGuessInput());
 
             player.printMessage(game.checkGuess(player.getGuess(), player.getGuessList()));
             player.printMessage(game.toString(game.getUnknown()));
 
-            game.setGameFinished(game.isGameFinished());
-
             //Only print if game not finished
-            if (!game.gameFinished){AsciiMan.checkLives(game.getLives());}
+            if (!game.isGameFinished()){AsciiMan.checkLives(game.getLives());}
 
             //Provides a line break so can see new guess
             player.printMessage("            ");

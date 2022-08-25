@@ -4,7 +4,6 @@ import java.util.Arrays;
 public class Game {
     private String[] answer;
     private String[] unknown;
-    protected boolean gameFinished = false;
     private int lives = 10;
 
     public String[] getUnknown() {
@@ -21,10 +20,6 @@ public class Game {
 
     protected void setUnknown(String[] unknown) {
         this.unknown = unknown;
-    }
-
-    protected void setGameFinished(boolean gameFinished) {
-        this.gameFinished = gameFinished;
     }
 
     protected String[] getWordChars() {
